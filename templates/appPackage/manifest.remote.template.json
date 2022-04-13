@@ -39,10 +39,10 @@
             },
             {
               "title": "runtest",
-              "description": "Ask for details before running the test"
+              "description": "Sends a card to user asking details for running the test through WPT"
             },
             {
-              "title": "key",
+              "title": "updatekey",
               "description": "Resend card to update a new key"
             }
           ]
