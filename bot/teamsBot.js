@@ -88,12 +88,12 @@ class TeamsBot extends TeamsActivityHandler {
           await context.sendActivity({ attachments: [CardFactory.adaptiveCard(card)] });
           break;
         }
-        case "key": {
+        case "updatekey": {
           const card = cardTools.AdaptiveCards.declare(keyCard).render();
           await context.sendActivity({ attachments: [CardFactory.adaptiveCard(card)] });
           break;
         }
-        case "test": {
+        case "runtest": {
           if (key === undefined) {
             const card = cardTools.AdaptiveCards.declare(keyCard).render();
             await context.sendActivity({ attachments: [CardFactory.adaptiveCard(card)] });
