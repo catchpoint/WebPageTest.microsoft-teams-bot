@@ -1,0 +1,30 @@
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "size": "Medium",
+      "weight": "Bolder",
+      "text": "Your WEBPAGETEST Bot is Running"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Congratulations! Now you can fire your webpagetest directly from teams.",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "Commands:- runtest, updatekey",
+      "wrap": true
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.OpenUrl",
+      "title": "Webpagetest",
+      "url": "https://www.webpagetest.org"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.4"
+}

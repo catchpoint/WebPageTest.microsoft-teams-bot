@@ -1,0 +1,34 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Your Test Results Are Here",
+      "weight": "bolder",
+      "size": "large",
+      "horizontalAlignment": "center"
+    },
+    {
+      "type": "TextBlock",
+      "text": "URL Tested:- ${testedurl}"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Full Results:- ${result}"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Waterfall Image",
+      "weight": "bolder",
+      "size": "large",
+      "horizontalAlignment": "center"
+    },
+    {
+      "type": "Image",
+      "url": "${image}",
+      "horizontalAlignment": "center"
+    }
+  ]
+}
