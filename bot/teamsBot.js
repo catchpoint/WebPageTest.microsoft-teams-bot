@@ -63,7 +63,8 @@ class TeamsBot extends TeamsActivityHandler {
             }
           })
           .catch(async () => {
-            await context.sendActivity("Please update your key, Use command 'key'");
+            isRunning = false;
+            await context.sendActivity("Please update your key, Use command 'updatekey'");
             await next();
           });
       }
