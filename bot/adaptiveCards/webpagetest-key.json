@@ -19,7 +19,7 @@
       "data": {
         "msteams": {
           "type": "messageBack",
-          "text": "test"
+          "text": "runtest"
         }
       }
     }
