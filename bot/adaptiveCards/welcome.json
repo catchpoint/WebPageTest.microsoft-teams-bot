@@ -5,11 +5,11 @@
       "type": "TextBlock",
       "size": "Medium",
       "weight": "Bolder",
-      "text": "Your WEBPAGETEST Bot is Running"
+      "text": "Your Webpagetest Bot is Running"
     },
     {
       "type": "TextBlock",
-      "text": "Congratulations! Now you can fire your webpagetest directly from teams.",
+      "text": "Congratulations!! \n\n Now you can fire your webpagetest directly from teams.",
       "wrap": true
     },
     {
