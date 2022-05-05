@@ -50,6 +50,11 @@ Now, All you have to do is fire up some tests.
 3. updatekey
 <img src="assets/images/update.png" alt="drawing" style="width:400px;display:block"/>
 
+## Sample Output
+
+<img src="assets/images/result.png" alt="drawing" style="width:400px;display:block"/>
+
+
 
 
 
