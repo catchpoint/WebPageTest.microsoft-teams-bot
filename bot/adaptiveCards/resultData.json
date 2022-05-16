@@ -19,6 +19,26 @@
       "text": "Full Results:- ${result}"
     },
     {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.OpenUrl",
+          "title": "WPT Results",
+          "url": "${result}"
+        },
+        {
+          "type": "Action.OpenUrl",
+          "title": "Core Web Vitals",
+          "url": "${webvitals}"
+        },
+        {
+          "type": "Action.OpenUrl",
+          "title": "Filmstrip View",
+          "url": "${filmstrip}"
+        }
+      ]
+    },
+    {
       "type": "TextBlock",
       "text": "Waterfall Image",
       "weight": "bolder",

@@ -54,6 +54,8 @@ class TeamsBot extends TeamsActivityHandler {
               this.resultDataObj = {
                 testedurl: test.result.data.url,
                 result: `https://webpagetest.org/result/${test.result.data.id}`,
+                webvitals: `https://webpagetest.org/vitals.php?test=${test.result.data.id}&run=1`,
+                filmstrip: `https://webpagetest.org/video/compare.php?tests=${test.result.data.id}-r:1-c:0-e:filmstrip`,
                 image: test.result.data.median.firstView.images.waterfall,
               };
               const card = cardTools.AdaptiveCards.declare(resultCard).render(this.resultDataObj);
@@ -100,7 +102,7 @@ class TeamsBot extends TeamsActivityHandler {
             await context.sendActivity({ attachments: [CardFactory.adaptiveCard(card)] });
           } else {
             const locationsResult = await getLocations(
-              new WebPageTest("www.webpagetest.org"),
+              new WebPageTest("www.webpagetest.org", "wptapikey"),
               options
             );
             const allLocations = locationsResult.result.response.data.location;
