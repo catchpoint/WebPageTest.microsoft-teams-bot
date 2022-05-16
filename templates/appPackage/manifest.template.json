@@ -5,17 +5,17 @@
   "id": "{{state.fx-resource-appstudio.teamsAppId}}",
   "packageName": "com.microsoft.teams.extension",
   "developer": {
-    "name": "Teams App, Inc.",
-    "websiteUrl": "{{{state.fx-resource-frontend-hosting.endpoint}}}",
-    "privacyUrl": "{{{state.fx-resource-frontend-hosting.endpoint}}}{{{state.fx-resource-frontend-hosting.indexPath}}}/privacy",
-    "termsOfUseUrl": "{{{state.fx-resource-frontend-hosting.endpoint}}}{{{state.fx-resource-frontend-hosting.indexPath}}}/termsofuse"
+    "name": "Siddhant Shukla",
+    "websiteUrl": "https://webpagetest.org/",
+    "privacyUrl": "https://www.catchpoint.com/trust#privacy",
+    "termsOfUseUrl": "https://www.webpagetest.org/terms.php"
   },
   "icons": {
     "color": "resources/color.png",
     "outline": "resources/outline.png"
   },
   "name": {
-    "short": "{{config.manifest.appName.short}}",
+    "short": "WebPageTest Teams Bot",
     "full": "{{config.manifest.appName.full}}"
   },
   "description": {
