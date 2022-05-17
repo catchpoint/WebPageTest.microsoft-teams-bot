@@ -42,11 +42,19 @@ class TeamsBot extends TeamsActivityHandler {
         options = Object.assign(options, {
           location: context._activity.value.location,
         });
+
         options = Object.assign(options, {
           connectivity: context._activity.value.connectivity,
         });
+        console.log(context._activity.value.isLighthouse);
+
+        options = Object.assign(options, {
+          lighthouse: context._activity.value.isLighthouse == "true" ? true : false,
+        });
+
         const wpt = new WebPageTest("www.webpagetest.org", key); // Your WPT API Key
         isRunning = true;
+
         await runTest(wpt, url, options)
           .then(async (test) => {
             if (test) {
@@ -64,7 +72,8 @@ class TeamsBot extends TeamsActivityHandler {
               await next();
             }
           })
-          .catch(async () => {
+          .catch(async (err) => {
+            console.log(err);
             isRunning = false;
             await context.sendActivity("Please update your key, Use command 'updatekey'");
             await next();
@@ -218,6 +227,26 @@ class TeamsBot extends TeamsActivityHandler {
                 {
                   type: "Input.ChoiceSet",
                   id: "isMobile",
+                  style: "expanded",
+                  value: "false",
+                  choices: [
+                    {
+                      title: "Yes",
+                      value: "true",
+                    },
+                    {
+                      title: "No",
+                      value: "false",
+                    },
+                  ],
+                },
+                {
+                  type: "TextBlock",
+                  text: "Generate LightHouse Report?",
+                },
+                {
+                  type: "Input.ChoiceSet",
+                  id: "isLighthouse",
                   style: "expanded",
                   value: "false",
                   choices: [
